@@ -5,6 +5,8 @@ import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./src/screens/HomeScreen";
 import SearchScreen from "./src/screens/SearchScreen";
 import SpacesScreen from "./src/screens/SpacesScreen";
+import MailScreen from "./src/screens/MailScreen";
+import NotificationScreen from "./src/screens/NotificationScreen";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import MaterialIcons from"react-native-vector-icons/MaterialIcons";
@@ -55,6 +57,24 @@ export default function App() {
           options={{
             tabBarIcon: ({ color, size }) => (
               <FontAwesome name="microphone" size={size} color={color} />
+            ),
+          }}
+        />
+                 <Tab.Screen
+          name="notification"
+          component={NotificationScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome5 name="bell" size={size} color={color} />
+            ),
+          }}
+        />
+         <Tab.Screen
+          name="mail"
+          component={MailScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialIcons name="mail-outline" size={size} color={color} />
             ),
           }}
         />
