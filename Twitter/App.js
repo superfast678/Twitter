@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import HomeScreen from "./src/screens/HomeScreen";
+import SearchScreen from "./src/screens/SearchScreen";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import MaterialIcons from"react-native-vector-icons/MaterialIcons";
@@ -35,6 +36,15 @@ export default function App() {
           options={{
             tabBarIcon: ({ color, size }) => (
               <FontAwesome name="home" size={size} color={color} />
+            ),
+          }}
+        />
+         <Tab.Screen
+          name="search"
+          component={SearchScreen}
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <FontAwesome name="search" size={size} color={color} />
             ),
           }}
         />
